@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    min-height: 120vh;
+}
+
+label {
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background: #191919;
+    border-radius: 35px;
+}
+
+label input {
+    appearance: none;
+}
+
+label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: #222;
+    border: 6px solid #191919;
+    border-radius: 35px;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label input:checked ~ span {
+    left: 75px;
+}
+
+label span ion-icon {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+label input:checked ~ span ion-icon {
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) 
+    drop-shadow(0 0 10px #fff)
+    drop-shadow(0 0 15px #fff);
+}
+
+.lamp {
+    position: absolute;
+    top: -500px;
+    left: -90%;
+    transform: rotate(180deg);
+    width: 260px;
+    height: 408px;
+    pointer-events: none;
+    background: url(off.gif);
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+label input:checked ~ .lamp {
+    background: url(on.gif);
+    background-repeat: no-repeat;
+}
