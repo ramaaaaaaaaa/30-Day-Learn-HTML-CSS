@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: calc(100% - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    overflow: hidden;
+    width: 7.5rem;
+    height: 4rem;
+}
+
+.switch input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+.switch label {
+    cursor: pointer;
+}
+
+.background {
+    z-index: 1;
+    position: absolute;
+    width: 7.5rem;
+    height: 4rem;
+    border-radius: 2.5rem;
+    border: 0.25rem solid #222;
+    background: linear-gradient(to right,
+    #444 0%, #222 100%);
+    transition: all 0.3s;
+}
+
+.isi {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #444;
+    transition: 0.75s all ease;
+}
+
+.switch input:checked ~ .isi {
+    background: #E9F8FD;
+}
+
+.bintang1, .bintang2 {
+    position: absolute;
+    height: 0.4rem;
+    width: 0.4rem;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: 0.3s all ease;
+}
+
+.bintang1 {
+    top: 6px;
+    right: 23px;
+}
+
+.bintang2 {
+    top: 40px;
+    right: 48px;
+}
+
+.bintang1:after,
+.bintang1:before,
+.bintang2:after,
+.bintang2:before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 0.25rem;
+    width: 0.25rem;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: 0.2s all ease;
+}
+
+.bintang1:after {
+    top: 8px;
+    right: 20px;
+}
+
+.bintang1:before {
+    top: 18px;
+    right: -12px;
+}
+
+.bintang2:after {
+    top: -8px;
+    right: -16px;
+}
+
+.bintang2:before {
+    top: 6px;
+    right: -26px;
+}
+
+.pagi {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    margin: 0.5rem;
+    background: #FFFDF2;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    border: 0.25rem solid #DEE2C6;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.pagi .titik {
+    position: absolute;
+    top: 3px;
+    left: 23px;
+    height: 1rem;
+    width: 1rem;
+    background: #EFEED8;
+    border: 0.25rem solid #DEE2C6;
+    border-radius: 50%;
+    transition: 0.4s all ease;
+}
+
+.pagi .titik:after, 
+.pagi .titik:before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 0.25rem;
+    width: 0.25rem;
+    background: #EFEED8;
+    border: 0.25rem solid #DEE2C6;
+    border-radius: 50%;
+    transition: 0.4s all ease;
+}
+
+.pagi .titik:after {
+    top: 2px;
+    left: -26px;
+}
+
+.pagi .titik:before {
+    top: 18px;
+    left: -10px;
+}
+
+.switch input:checked ~ .pagi {
+    left: calc(100% - 4rem);
+    background: #F5EC59;
+    border-color: #E7C65C;
+    transform: rotate(-25deg);
+    box-shadow: 0 0 10px #F5EC59, 0 0 15px 
+    #F5EC59, 0 0 20px #F5EC59;
+    border-radius: 50%;
+}
+
+.switch input:checked ~ .pagi .titik,
+.switch input:checked ~ .pagi .titik:after,
+.switch input:checked ~ .pagi .titik::before {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.switch input:checked ~ .pagi .titik {
+    height: 1.5rem;
+    width: 1.5rem;
+    top: 0;
+    left: -20px;
+    transform: rotate(25deg);
+}
+
+.switch input:checked ~ .pagi .titik:after {
+    height: 0.65rem;
+    width: 0.65rem;
+    top: 2px;
+    left: -12px;
+}
+
+.switch input:checked ~ .pagi .titik:before {
+    height: 0.4rem;
+    width: 0.4rem;
+    top: 6px;
+    left: 14px;
+}
+
+.switch input:checked ~ .background .bintang1,
+.switch input:checked ~ .background .bintang2 {
+    opacity: 0;
+    transform: translateY(2rem);
+}
+
+.switch input:checked ~ .background {
+    border: 0.25rem solid #78C1D5;
+    background: linear-gradient(to right, #78C1D5 0%,
+    #BBE7F5 100%);
+}
