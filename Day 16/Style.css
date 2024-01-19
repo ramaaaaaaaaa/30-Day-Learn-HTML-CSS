@@ -1,0 +1,19 @@
+body {
+    background: rgb(229, 223, 223);
+}
+
+img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.photo-grid-container {
+    column-count: 5;
+    column-width: 300px;
+}
+
+.photo-grid-item {
+    margin: 0 auto 15px;
+    max-width: 400px;
+    width: 100%;
+}
