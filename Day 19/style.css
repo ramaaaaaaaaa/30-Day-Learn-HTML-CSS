@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #111;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    padding: 15px;
+    background: rgb(229, 223, 223);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    z-index: 100;
+    position: absolute;
+    bottom: 70px;
+    right: 115px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #111;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+.card h1 {
+    z-index: 100;
+    position: absolute;
+    top: 120px;
+    left: -10px;
+    font-size: 200px;
+    transform: rotate(-10deg);
+    opacity: 0.2;
+}
+
+.card p {
+    z-index: 99;
+    position: absolute;
+    bottom: 130px;
+    right: 270px;
+    width: 150px;
+    color: #111;
+    opacity: 0;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
+    letter-spacing: 1px;
+    transition: 0.2 ease;
+}
+
+.card .pic {
+    z-index: 100;
+    width: 250px;
+    height: 120px;
+    position: absolute;
+    right: 80px;
+    top: 200px;
+    background-image: url(shoe.png);
+    background-size: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    transform: rotate(-30deg);
+}
+
+.card a {
+    z-index: 100;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 330px;
+    left: 120px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 3px;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+.card .submit {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #111;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+}
+
+.card button {
+    z-index: 99;
+    position: absolute;
+    top: -100px;
+    left: 200px;
+    width: 300px;
+    height: 300px;
+    background: #00A0A3;
+    border: none;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.card:hover .submit {
+    position: absolute;
+    bottom: 35px;
+    opacity: 1;
+}
+
+.submit:hover {
+    background: #00A0A3;
+}
+
+.card:hover a, 
+.card:hover p {
+    opacity: 1;
+}
+
+a:hover {
+    cursor: pointer;
+    background: #00A0A3;
+}
+
+.card:hover button {
+    transform: scale(2);
+}
+
+.card:hover h2 {
+    bottom: 180px;
+}
+
+.card:hover .pic {
+    top: 100px;
+    right: 100px;
+    width: 210px;
+    height: 100px;
+}
+
+.icons {
+    z-index: 100;
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    color: #111;
+    font-size: 20px;
+    display: flex;
+    cursor: pointer;
+}
+
+.menu {
+    position: relative;
+    right: 275px;
+    cursor: pointer;
+}
+
+h6 {
+    position: relative;
+    right: 10px;
+    top: -10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 120;
+    font-size: 10px;
+    background: red;
+}
