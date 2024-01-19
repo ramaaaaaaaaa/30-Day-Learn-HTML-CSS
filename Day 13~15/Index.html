@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Dashboard Taks</title>
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="logo">
+            <li>
+                <a href="#">
+                    <i class="fas fa-user-alt"></i>
+                    <span>Login</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="active">
+                <a href="#">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Statistic</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-briefcase"></i>
+                    <span>carier</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Setting</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <span>Primary</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user-info">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search" />
+                </div>
+                <div class="user">
+                    <i class="fas fa-circle-user"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <h3 class="main-title">Today Data</h3>
+            <div class="card-wrapper">
+                <div class="payment-card">
+                    <div class="card-header">
+                        <div class="amount">
+                            <span class="title">Payment Amount</span>
+                            <span class="amount-value">Rp 500.000</span>
+                            <a class="mastercard-1"></a>
+                            <a class="mastercard-2"></a>
+                        </div>
+                        <i class="fas fa-rupiah-sign icon"></i>
+                    </div>
+                    <span class="card-detail">**** **** **** 1204</span>
+                </div>
+                <div class="payment-card">
+                    <div class="card-header">
+                        <div class="amount">
+                            <span class="title">Payment Order</span>
+                            <span class="amount-value">Rp 230.000</span>
+                            <a class="mastercard-1"></a>
+                            <a class="mastercard-2"></a>
+                        </div>
+                        <i class="fas fa-list-dots icon dark-blue"></i>
+                    </div>
+                    <span class="card-detail">**** **** **** 0259</span>
+                </div>
+                <div class="payment-card">
+                    <div class="card-header">
+                        <div class="amount">
+                            <span class="title">Payment Customer</span>
+                            <span class="amount-value">Rp 250.000</span>
+                            <a class="mastercard-1"></a>
+                            <a class="mastercard-2"></a>
+                        </div>
+                        <i class="fas fa-user-plus icon light-blue"></i>
+                    </div>
+                    <span class="card-detail">**** **** **** 2210</span>
+                </div>
+                <div class="payment-card">
+                    <div class="card-header">
+                        <div class="amount">
+                            <span class="title">Payment Proceed</span>
+                            <span class="amount-value">Rp 200.000</span>
+                            <a class="mastercard-1"></a>
+                            <a class="mastercard-2"></a>
+                        </div>
+                        <i class="fas fa-check icon dark-purple"></i>
+                    </div>
+                    <span class="card-detail">**** **** **** 1810</span>
+                </div>
+            </div>
+        </div>
+        <div class="tabular-wrapper">
+            <h3 class="main-title">Finance Data</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Transaksi Type</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-01-01</td>
+                            <td>Pengeluaran</td>
+                            <td>Keperluan Kantor</td>
+                            <td>Rp 200.000</td>
+                            <td>Pengeluaran Kantor</td>
+                            <td>Success</td>
+                            <td><button>Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-02</td>
+                            <td>Pemasukan</td>
+                            <td>Pembayaran Product</td>
+                            <td>Rp 300.000</td>
+                            <td>Pemasukan Kantor</td>
+                            <td>Pending</td>
+                            <td><button>Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-03</td>
+                            <td>Pengeluaran</td>
+                            <td>Gaji Karyawan</td>
+                            <td>Rp 500.000</td>
+                            <td>Pengeluaran Kantor</td>
+                            <td>Success</td>
+                            <td><button>Edit</button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="7">Total: Rp 1.000.000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
