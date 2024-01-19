@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+label {
+    background: #333;
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #222;
+    transition: 0.3s;
+    padding-top: 40px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+}
+
+.side-nav label {
+    background: #333;
+    color: #fff;
+    display: block;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.side-nav label::after {
+    content: '\25B6';
+    float: right;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 12px;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav ul li {
+    padding: 3px 13px;
+}
+
+.side-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    display: block;
+    transition: 0.3s;
+    padding: 6px 0;
+}
+
+.side-nav ul li a:hover {
+    color: black;
+    background: #fff;
+    outline: none;
+    width: 50px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    left: -100px;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+}
+
+#menuToggle:checked + label + .side-nav {
+    left: 0;
+}
+
+#menuToggle:checked + label + .side-nav ul li a {
+    transition: 0s;
+}
+
+#menuToggle:checked + label + .side-nav ul li a:active {
+    transition: 0s;
+    background-color: #fff;
+}
+
+#menuToggle:checked + label + .side-nav + .content {
+    margin-left: 250px;
+}
+
+.content {
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+
