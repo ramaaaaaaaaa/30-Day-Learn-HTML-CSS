@@ -1,0 +1,115 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    user-select: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    height: 68vh;
+    width: 25%;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 20px 60px 0 rgba(0, 0, 0, .5);
+    border-radius: 50px;
+}
+input {
+    position: absolute;
+    opacity: 0;
+    margin-top: 80vh;
+    cursor: pointer;
+}
+label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 62vh 6px 0 6px;
+    z-index: 5;
+    cursor: pointer;
+    transition-duration: .4s;
+    box-shadow: 0 0 20px 0 #000;
+}
+input:checked + label {
+    background-color: white;
+}
+input + label::after {
+    content: '';
+    background-image: url(prev.png);
+    background-repeat: no-repeat;
+    background-position: center 55%;
+    background-size: 30px 50px;
+    line-height: 100vh;
+    transition: background-size 200ms;
+    position: absolute;
+    width: 5%;
+    height: calc(95vh - 12px);
+    top: 0;
+    left: 37%;
+    z-index: 20;
+}
+input + label:hover::after {
+    background-size: 30px 60px;
+}
+input:checked + label::after {
+    background-image: none;
+    width: 100vw;
+    left: 0;
+    z-index: 10;
+}
+input:checked + label + .slide ~ input + label::after {
+    display: none;
+}
+input:checked + label + .slide + input + label::after {
+    background-image: url(next.png);
+    display: block;
+    width: 5%;
+    right: 37%;
+    left: auto;
+}
+input:focus + label {
+    box-shadow: 0 0 0 2px teal, 0 0 10px white;
+}
+.slide {
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+    top: 26%;
+    left: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition-duration: .4s;
+    opacity: 1;
+}
+input:checked ~ .slide {
+    transform: translateX(100%);
+}
+input:checked + label + .slide {
+    transform: translateX(0);
+    opacity: 1;
+}
+.bg1 {
+    background-image: url(1.jpg);
+}
+.bg2 {
+    background-image: url(2.jpg);
+}
+.bg3 {
+    background-image: url(3.jpg);
+}
+.bg4 {
+    background-image: url(4.jpg);
+}
