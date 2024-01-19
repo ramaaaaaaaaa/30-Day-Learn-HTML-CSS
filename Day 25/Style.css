@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box {
+    position: relative;
+    font-size: 50px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .6);
+    margin: 0 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.box a {
+    text-decoration: none;
+    color: #222;
+}
+.box:hover {
+    background: rgba(0, 0, 0, .2);
+}
+.box:hover a .yt,
+.box:hover a .ig {
+    color: red;
+}
+.box:hover a .fb {
+    color: blue;
+}
+.box:hover a .x,
+.box:hover a .gt {
+    color: black;
+}
