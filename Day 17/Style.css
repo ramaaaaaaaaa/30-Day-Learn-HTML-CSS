@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #163020, #304D30);
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.card-header {
+    background: rgb(229, 223, 223);
+    border-radius: 25px;
+    padding: 1.2rem;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(to right, #163020, #304D30);
+    font-weight: 600;
+    border-radius: 25px;
+    width: 150px;
+    height: 40px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.price {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    position: relative;
+    top: -20px;
+    left: 70px;
+}
+
+.rp {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    position: relative;
+    top: 25px;
+    left: 40px;
+}
+
+.price-end {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    position: relative;
+    top: 28px;
+    left: 130px;
+}
+
+.profit {
+    position: relative;
+    list-style: none;
+    height: 60%;
+    padding: 0;
+}
+
+.profit li {
+    display: flex;
+    font-size: 15px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    position: relative;
+    top: 10px;
+    left: 65px;
+}
+
+.list {
+    color: #3887BE;
+}
+
+.profi li span {
+    overflow: hidden;
+}
+
+.field-input {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+}
+
+.submit {
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    background: rgba(255, 255, 255, 0.6);
+    color: #111;
+}
+
+.submit:hover {
+    color: #fff;
+    background: linear-gradient(to right, #163020, #304D30);
+}
